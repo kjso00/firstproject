@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+    <comment />
+    <entry key="libraryFindByTitle">
+        SELECT
+            *
+        FROM book_list
+        WHERE book_inventory = 1 AND book_title = ?
+    </entry>
+
+    <entry key="libraryRentalService">
+        update book_list
+        set book_inventory = 1
+        where book_name = "사용자에게 입력받은 책";
+    </entry>
+
+
+</properties>
